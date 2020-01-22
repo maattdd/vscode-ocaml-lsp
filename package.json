@@ -1,0 +1,99 @@
+{
+  "name": "ocaml-lsp-client",
+  "displayName": "ocaml-lsp-client",
+  "description": "OCaml LSP client",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:ocaml",
+    "onLanguage:ocamllex",
+    "onLanguage:menhir"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "ocaml",
+        "aliases": [
+          "OCaml"
+        ],
+        "extensions": [
+          ".ml",
+          ".mli"
+        ],
+        "filenames": [
+          ".ocamlinit"
+        ],
+        "configuration": "./ocaml.configuration.json"
+      },
+      {
+        "id": "ocamllex",
+        "aliases": [
+          "OCamllex"
+        ],
+        "extensions": [
+          ".mll"
+        ],
+        "configuration": "./ocamllex.configuration.json"
+      },
+      {
+        "id": "menhir",
+        "aliases": [
+          "Menhir",
+          "OCamlyacc"
+        ],
+        "extensions": [
+          ".mly"
+        ],
+        "configuration": "./menhir.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ocaml",
+        "scopeName": "source.ocaml",
+        "path": "./syntaxes/OCaml.tmLanguage"
+      },
+      {
+        "language": "ocamllex",
+        "scopeName": "source.ocamllex",
+        "path": "./syntaxes/OCamllex.tmLanguage"
+      },
+      {
+        "language": "menhir",
+        "scopeName": "source.menhir",
+        "path": "./syntaxes/Menhir.tmLanguage"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.41.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "typescript": "^3.6.4",
+    "tslint": "^5.20.0",
+    "vscode-test": "^1.2.2",
+    "vscode-languageclient": "^6.0.0"
+  }
+}
