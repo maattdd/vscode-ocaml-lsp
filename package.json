@@ -6,6 +6,9 @@
   "engines": {
     "vscode": "^1.41.0"
   },
+  "publisher": "maattdd",
+  "repository": "https://github.com/maattdd/vscode-ocaml-lsp",
+  "license": "MIT",
   "categories": [
     "Programming Languages"
   ],
@@ -16,12 +19,6 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "languages": [
       {
         "id": "ocaml",
