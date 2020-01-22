@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import {
   LanguageClient,
@@ -19,8 +17,8 @@ import {
 export function activate(context: vscode.ExtensionContext) {
   const serverConf = {
     transport: TransportKind.stdio,
-    command: "ocamllsp",
-    args: ["--log-file=/Users/matthieudubet/lsplogg"]
+    command: "ocamllsp"
+    //TODO args: ["--log-file=lsplog"]
   };
 
   let clientOptions: LanguageClientOptions = {
@@ -36,8 +34,6 @@ export function activate(context: vscode.ExtensionContext) {
   // Push the disposable to the context's subscriptions so that the
   // client can be deactivated on extension deactivation
   context.subscriptions.push(disposable);
-
-  console.info("ocaml lsp running");
 }
 
 // this method is called when your extension is deactivated

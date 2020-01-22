@@ -1,6 +1,6 @@
 {
-  "name": "ocaml-lsp-client",
-  "displayName": "ocaml-lsp-client",
+  "name": "vscode-ocaml-lsp",
+  "displayName": "vscode-ocaml-lsp",
   "description": "OCaml LSP client",
   "version": "0.0.1",
   "engines": {
@@ -90,7 +90,9 @@
     "mocha": "^6.2.2",
     "typescript": "^3.6.4",
     "tslint": "^5.20.0",
-    "vscode-test": "^1.2.2",
+    "vscode-test": "^1.2.2"
+  },
+  "dependencies": {
     "vscode-languageclient": "^6.0.0"
   }
 }
