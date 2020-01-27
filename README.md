@@ -1,6 +1,13 @@
 # ocaml-lsp-client README
 
+The syntax files come from https://github.com/hackwaly/vscode-ocaml (which is deprecated).
+
 ## Features
+
+- Code diagnostic (warnings,errors)
+- Code action (suggestions)
+- Type information of hover
+- Type information inlined on top of each function
 
 ## Requirements
 
