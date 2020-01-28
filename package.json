@@ -2,7 +2,7 @@
   "name": "vscode-ocaml-lsp",
   "displayName": "vscode-ocaml-lsp",
   "description": "OCaml LSP client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -15,10 +15,17 @@
   "activationEvents": [
     "onLanguage:ocaml",
     "onLanguage:ocamllex",
-    "onLanguage:menhir"
+    "onLanguage:menhir",
+    "onCommand:vscode-ocaml-lsp-client.restart"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "vscode-ocaml-lsp-client.restart",
+        "title": "OCaml: Restart LSP"
+      }
+    ],
     "languages": [
       {
         "id": "ocaml",
